@@ -66,10 +66,10 @@ $user='u47586'; $pass='3927785';
 $db=new PDO('mysql:host=localhost;dbname=u47586',$user,$pass, array(PDO::ATTR_PERSISTENT=>true));
 
 try{
-    $stmt=$bd->prepare("INSERT INTO MainData SET name = ?, email = ?, date=?, gender=?, hand=?, check=?");
-    $stmt->execute(array($name, $email,$date, $gender,$hand, $check));
+    $stmt=$bd->prepare("INSERT INTO MainData SET name = ?, email = ?, age=?, gender=?, numberOfLimb=?,biography=?);
+    $stmt->execute(array($name, $email,$date, $gender,$hand,$biography));
 
-    $super=$db->>prepare("INSERT INTO Superpovers SET powers=?");
+    $super=$db->>prepare("INSERT INTO Superpovers SET superpower=?");
     $super->execute(array($syperpover));
 }
 catch(PDOException $e)
