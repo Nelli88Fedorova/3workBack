@@ -6,7 +6,7 @@ if(!empty($_GET['save']))
 {
     print('Данные сохранены');
 }
-include('index.html');
+include('index.php');
 exit();
 }
 $flag=FALSE;
